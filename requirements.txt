@@ -1,0 +1,4 @@
+mkdocs-material~=9.5
+
+# Pinning a dependency to a minor version ensures that 
+# the project will use the latest fixes, called patch releases, within that version
