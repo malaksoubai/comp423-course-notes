@@ -8,7 +8,7 @@
 
 Hi all! This is an easy tutorial for creating a new project in dev container for Go! Go is an open-source programming language that Google developed. It's used to create software for a variety of purposes, including cloud-based applications, web applications, and networking services. 
 
-This tutorial is made in collaboration with Yueen Ma. Hope you all enjoy!
+This tutorial is made in collaboration with Yueen Ma. Hope you all enjoy! :smile:
 
 ## Prerequesites
 
@@ -139,7 +139,7 @@ func main() {
 $ go run .
 ```
 
-4. You are all done!
+4. You are all done! :smile:
 
 ### Citations: 
 1. Jordan, Kris. "Starting a Static Website Project with MkDocs," _COMP423 - Spring 2025_, https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-2-add-requirementstxt-python-dependency-configuration. 
