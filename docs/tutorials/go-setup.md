@@ -58,7 +58,7 @@ git commit -m "Initial commit with README"
 2. Fill in the details as follows:
 
 - **Repository Name**: go-project
-- **Description**: "Go Dev Container."
+- **Description**: "Go Dev Container for conding in Go."
 - **Visibility**: Public
 
 3.  Do not initialize the repository with a README, .gitignore, or license.
@@ -75,7 +75,7 @@ git remote add origin https://github.com/<your-username>/go-project.git
 
 Of course, replace ```<your-username>``` with your GitHub username.
 
-2. Check your default branch name with the subcommand git branch. If it's not main, rename it to main with the following command: git branch -M main. Old versions of git choose the name master for the primary branch, but these days main is the standard primary branch name.
+2. Check your default branch name with the subcommand git branch. If it's not main, rename it to main with the following command: ```bash git branch -M main```.
 
 3. Push your local commits to the GitHub repository:
 
@@ -92,7 +92,7 @@ git push --set-upstream origin main
 
 ### What is a Development (Dev) Container?
 
-A dev container ensures that your development environment is consistent and works across different machines. Think of it as a "mini computer" inside your computer that includes everything you need to work on a specific project. In the technology industry, teams often work on complex projects that require a specific set of tools and dependencies to function correctly. With a dev container, everyone works in an identical environment, reducing bugs caused by "it works on my machine" issues.
+A dev container ensures that your development environment is consistent and works across different machines. It is like a "mini computer" inside your computer that includes everything you need to work on a specific project. With a dev container, everyone works in an identical environment, reducing bugs caused by "it works on my machine" issues.
 
 ### STEP 1. Add Development Container Configuration
 
@@ -113,16 +113,21 @@ A dev container ensures that your development environment is consistent and work
   "postCreateCommand": "go mod init github.com/<your-username>/go-project"
 }
 ```
+4. Save your changes and open the **Command Palette** in VS Code (Ctrl+Shift+P or Cmd+Shift+P on Mac).
+
+5. Search for and select **Dev Containers: Rebuild and Reopen in Container**. This step may take some time.
 
 ## PART3. Write some code
 
-1. check go version
+1. After the container reloads, check that Go was sucessefully installed (see PART 0):
 
 ```bash
 go version
 ```
 
-2. Paste the following code into your file and save the file.
+2. Create a new file called ```tutorial.go```
+
+3. Paste the following code into your file and save the file.
 
 ```go
 package main
@@ -133,18 +138,20 @@ func main() {
     fmt.Println("Hello COMP423!")
 }
 ```
-3. Run your code to see the greeting.
+4. In your terminal, run your code to see the greeting. 
 
 ```go
 $ go run .
 ```
 
-4. You are all done! :smile:
+You should see the output: ```Hello COMP423!```
+
+5. You are all done! :smile:
 
 ### Citations: 
 1. Jordan, Kris. "Starting a Static Website Project with MkDocs," _COMP423 - Spring 2025_, https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-2-add-requirementstxt-python-dependency-configuration. 
 
-2. [Klabnik, Steve and Nichols, Carol, "The Rust Programming Language," https://doc.rust-lang.org/book/.](https://go.dev/doc/tutorial/getting-started)
+2. Klabnik, Steve and Nichols, Carol, "The Rust Programming Language," [https://doc.rust-lang.org/book/.](https://go.dev/doc/tutorial/getting-started)
 
 
 
