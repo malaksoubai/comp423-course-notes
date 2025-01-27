@@ -22,10 +22,6 @@ This tutorial is made in collaboration with Yueen Ma. Hope you all enjoy! :smile
 
 - Understand Command-line basics.
 
-## PART 0. Install Go
-
-Just use the [Download and install](https://go.dev/doc/install) steps.
-
 ## PART 1. Go Project Setup: Create Repo
 
 ### STEP 1. Create a Local Directory and Initialize Git
@@ -119,7 +115,7 @@ A dev container ensures that your development environment is consistent and work
 
 ## PART3. Write some code
 
-1. After the container reloads, check that Go was sucessefully installed (see PART 0):
+1. After the container reloads, check that Go is sucessefully running:
 
 ```bash
 go version
