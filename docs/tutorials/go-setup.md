@@ -84,7 +84,7 @@ git push --set-upstream origin main
 
 4. Back in your web browser, refresh your GitHub repository to see that the same commit you made locally has now been pushed to remote. You can use `git log` locally to see the commit ID and message which should match the ID of the most recent commit on GitHub. This is the result of pushing your changes to your remote repository.
 
-## PART2. Setup the Development Environment
+## PART 2. Setup the Development Environment
 
 ### What is a Development (Dev) Container?
 
@@ -113,13 +113,14 @@ A dev container ensures that your development environment is consistent and work
 
 5. Search for and select **Dev Containers: Rebuild and Reopen in Container**. This step may take some time.
 
-## PART3. Write some code
+## PART 3. Write some code
 
 1. After the container reloads, check that Go is sucessefully running:
 
 ```bash
 go version
 ```
+You should find the output: ```go version go1.23.4 linux/amd64```
 
 2. Create a new file called ```tutorial.go```
 
@@ -140,15 +141,54 @@ func main() {
 $ go run .
 ```
 
-You should see the output: ```Hello COMP423!```
+You should find the output: ```Hello COMP423!```
 
 5. You are all done! :smile:
 
+### Build your code
+
+1. Use the `build` subcommand to compile your code manually:
+
+```bash
+go build -o tutorial
+```
+
+!!! note "build and gcc"
+  - In COMP211, we used the gcc command to compile C programs. The go build command is similar to gcc: it translates your source code into a machine-readable binary file.
+
+2. Run the compiled binary directly:
+
+```bash
+./tutorial
+```
+You should find the output: ```Hello COMP423!```
+
+!!! note "Using build vs run"
+  - `$ go run main.go`  
+    The `go run` command compiles and runs your code in a single step. It uses a temporary directory to build the program, executes it, and then cleans up the temporary files.  
+
+    You can see the location of the temporary files by running:  
+    ```bash
+    go run --work main.go
+    ```  
+
+  - To explicitly compile your code, use the `go build` command:  
+    ```bash
+    go build main.go
+    ```  
+    This will generate an executable file called `main` (or `main.exe` on Windows). You can then run the executable directly:  
+    ```bash
+    ./main
+    ```  
+
+  - While developing, you can use either `go run` or `go build`. However, when deploying your code, you'll want to generate a binary using `go build` and execute that. 
+
 ### Citations: 
-1. Jordan, Kris. "Starting a Static Website Project with MkDocs," _COMP423 - Spring 2025_, https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-2-add-requirementstxt-python-dependency-configuration. 
+1. Jordan, Kris. ["Starting a Static Website Project with MkDocs"](https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-2-add-requirementstxt-python-dependency-configuration) _COMP423 - Spring 2025_.
 
-2. Klabnik, Steve and Nichols, Carol, "The Rust Programming Language," [https://doc.rust-lang.org/book/.](https://go.dev/doc/tutorial/getting-started)
+2. Klabnik, Steve and Nichols, Carol, ["The Rust Programming Language"](https://go.dev/doc/tutorial/getting-started).
 
+3. Quora, ["How does 'go run' differ from 'go build'?"](https://www.quora.com/How-does-go-run-differ-from-go-build).
 
 
 
